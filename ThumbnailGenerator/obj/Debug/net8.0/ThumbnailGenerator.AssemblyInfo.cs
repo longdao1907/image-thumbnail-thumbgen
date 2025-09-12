@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ThumbnailGenerator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3ad21a83b058db276c62d0a5d816e40824bfd0f4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bb532bd9fcb4953c016d24b82ea0bd8c0f1a066d")]
 [assembly: System.Reflection.AssemblyProductAttribute("ThumbnailGenerator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ThumbnailGenerator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

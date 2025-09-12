@@ -75,11 +75,10 @@ builder.Services.AddAuthorization();
 var app = builder.Build();
 
 // 2. Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+
 
 // Add authentication and authorization middleware
 app.UseAuthentication();
