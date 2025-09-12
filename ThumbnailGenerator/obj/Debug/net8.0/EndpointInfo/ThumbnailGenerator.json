@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/": {
+    "/api/Event/generate-thumbnail": {
       "post": {
         "tags": [
           "Event"

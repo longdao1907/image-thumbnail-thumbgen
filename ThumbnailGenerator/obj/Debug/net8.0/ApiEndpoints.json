@@ -2,7 +2,7 @@
   {
     "ContainingType": "ThumbnailGenerator.Controllers.EventController",
     "Method": "Post",
-    "RelativePath": "",
+    "RelativePath": "api/Event/generate-thumbnail",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

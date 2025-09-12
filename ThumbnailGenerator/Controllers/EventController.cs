@@ -14,7 +14,7 @@ using ThumbnailGenerator.Core.Domain.Models;
 namespace ThumbnailGenerator.Controllers
 {
     [ApiController]
-    [Route("/")]
+    [Route("api/Event")]
     [Authorize] // Protect all endpoints in this controller
     public class EventController : ControllerBase
     {
@@ -30,7 +30,7 @@ namespace ThumbnailGenerator.Controllers
 
         private static readonly CloudEventFormatter formatter = new JsonEventFormatter();
 
-        [HttpPost]
+        [HttpPost("generate-thumbnail")]
         public async Task<IActionResult> Post(CloudEvent cloudEvent)
         {
             var accessToken = await HttpContext.GetTokenAsync("access_token");        
