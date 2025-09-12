@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "ThumbnailGenerator.Controllers.EventController",
+    "Method": "Post",
+    "RelativePath": "",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cloudEvent",
+        "Type": "CloudNative.CloudEvents.CloudEvent",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
