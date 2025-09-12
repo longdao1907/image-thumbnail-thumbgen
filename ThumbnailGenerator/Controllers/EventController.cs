@@ -15,7 +15,7 @@ namespace ThumbnailGenerator.Controllers
 {
     [ApiController]
     [Route("api/Event")]
-    [Authorize] // Protect all endpoints in this controller
+    //[Authorize] // Protect all endpoints in this controller
     public class EventController : ControllerBase
     {
         private readonly IThumbnailService _thumbnailService;
