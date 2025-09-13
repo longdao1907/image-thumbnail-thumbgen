@@ -163,7 +163,6 @@ C:\Users\letin\OneDrive\Documents\image-thumbnail-thumbgen\ThumbnailGenerator\ob
 C:\Users\letin\OneDrive\Documents\image-thumbnail-thumbgen\ThumbnailGenerator\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\letin\OneDrive\Documents\image-thumbnail-thumbgen\ThumbnailGenerator\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\letin\OneDrive\Documents\image-thumbnail-thumbgen\ThumbnailGenerator\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\letin\OneDrive\Documents\image-thumbnail-thumbgen\ThumbnailGenerator\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\letin\OneDrive\Documents\image-thumbnail-thumbgen\ThumbnailGenerator\obj\Debug\net8.0\Thumbnai.A4449DE0.Up2Date
 C:\Users\letin\OneDrive\Documents\image-thumbnail-thumbgen\ThumbnailGenerator\obj\Debug\net8.0\ThumbnailGenerator.dll
 C:\Users\letin\OneDrive\Documents\image-thumbnail-thumbgen\ThumbnailGenerator\obj\Debug\net8.0\refint\ThumbnailGenerator.dll

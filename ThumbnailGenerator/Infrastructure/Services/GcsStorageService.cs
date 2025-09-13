@@ -4,7 +4,7 @@ using ThumbnailGenerator.Core.Application.Interfaces;
 
 namespace ThumbnailGenerator.Infrastructure.Services
 {
-    public class GcsStorageService: IStorageService
+    public class GcsStorageService : IStorageService
     {
         private readonly StorageClient _storageClient;
         private readonly string _bucketName;
@@ -23,12 +23,12 @@ namespace ThumbnailGenerator.Infrastructure.Services
             {
                 await _storageClient.DownloadObjectAsync(_bucketName, objectName, destination);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
-                throw ex;
+                throw;
             }
-            
+
         }
 
         public async Task<string> UploadFileAsync(string objectName, Stream source, string contentType)
@@ -42,6 +42,6 @@ namespace ThumbnailGenerator.Infrastructure.Services
             return uploadedObject.MediaLink;
         }
     }
-    
+
 }
 
