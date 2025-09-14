@@ -15,7 +15,7 @@ namespace ThumbnailGenerator.Core.Application.Services
         public ThumbnailService(
             IStorageService storageService,
             IImageProcessor imageProcessor,
-            IImageApiClient imageApiClient, 
+            IImageApiClient imageApiClient,
             ILogger<ThumbnailService> logger)
         {
             _storageService = storageService;
@@ -83,6 +83,8 @@ namespace ThumbnailGenerator.Core.Application.Services
                 await _imageApiClient.UpdateThumbnailStatusAsync(uploadThumbnailImageDto, accessToken);
             }
         }
+
+
     }
 }
 

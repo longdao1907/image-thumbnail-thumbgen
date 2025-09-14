@@ -25,11 +25,11 @@ namespace ThumbnailGenerator.Infrastructure.Services
             }
             catch (Exception)
             {
-
                 throw;
             }
-
         }
+
+
 
         public async Task<string> UploadFileAsync(string objectName, Stream source, string contentType)
         {
