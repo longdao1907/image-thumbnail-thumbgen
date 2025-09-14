@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ThumbnailGenerator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a6cc150a852d5e7e9d54e91826fb8fb52e39f26")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0afa6032ed1b344db6292411d12caeb6d1d38b54")]
 [assembly: System.Reflection.AssemblyProductAttribute("ThumbnailGenerator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ThumbnailGenerator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

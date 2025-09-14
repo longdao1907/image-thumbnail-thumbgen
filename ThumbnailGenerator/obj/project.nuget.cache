@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7z6M0/UVYhs=",
+  "dgSpecHash": "j7WNoZJCFpw=",
   "success": true,
-  "projectFilePath": "c:\\Users\\letin\\OneDrive\\Documents\\image-thumbnail-thumbgen\\ThumbnailGenerator\\ThumbnailGenerator.csproj",
+  "projectFilePath": "C:\\Users\\letin\\OneDrive\\Documents\\image-thumbnail-thumbgen\\ThumbnailGenerator\\ThumbnailGenerator.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\letin\\.nuget\\packages\\cloudnative.cloudevents\\2.8.0\\cloudnative.cloudevents.2.8.0.nupkg.sha512",
     "C:\\Users\\letin\\.nuget\\packages\\cloudnative.cloudevents.aspnetcore\\2.8.0\\cloudnative.cloudevents.aspnetcore.2.8.0.nupkg.sha512",
