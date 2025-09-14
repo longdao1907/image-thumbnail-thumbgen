@@ -24,7 +24,7 @@ namespace ThumbnailGenerator.Core.Application.Services
             _logger = logger;
         }
 
-        public async Task ProcessImageAsync(StorageObjectData data, string accessToken)
+        public async Task ProcessImageAsync(StorageObjectData data)
         {
             // **Architectural Note:** This assumes the GCS object name is structured like:
             // {foldername}/{imageId}_{originalFileName}
@@ -68,7 +68,7 @@ namespace ThumbnailGenerator.Core.Application.Services
                     ThumbnailUrl = string.Empty,
                     Status = ThumbnailUpdateStatus.Completed.ToString()
                 };
-                await _imageApiClient.UpdateThumbnailStatusAsync(uploadThumbnailImageDto, accessToken);
+                await _imageApiClient.UpdateThumbnailStatusAsync(uploadThumbnailImageDto);
             }
             catch (Exception ex)
             {
@@ -80,7 +80,7 @@ namespace ThumbnailGenerator.Core.Application.Services
                     Status = ThumbnailUpdateStatus.Completed.ToString(),
                     ThumbnailUrl = null
                 };
-                await _imageApiClient.UpdateThumbnailStatusAsync(uploadThumbnailImageDto, accessToken);
+                await _imageApiClient.UpdateThumbnailStatusAsync(uploadThumbnailImageDto);
             }
         }
 

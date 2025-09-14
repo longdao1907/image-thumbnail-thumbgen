@@ -15,12 +15,12 @@ namespace ThumbnailGenerator.Controllers
 {
     [ApiController]
     [Route("api/Event")]
-    //[Authorize] // Protect all endpoints in this controller
+    [Authorize] // Protect all endpoints in this controller
     public class EventController : ControllerBase
     {
         private readonly IThumbnailService _thumbnailService;
         private readonly ILogger<EventController> _logger;
-        
+
 
         public EventController(IThumbnailService thumbnailService, ILogger<EventController> logger)
         {
@@ -33,18 +33,12 @@ namespace ThumbnailGenerator.Controllers
         [HttpPost("generate-thumbnail")]
         public async Task<IActionResult> Post(CloudEvent cloudEvent)
         {
-            var accessToken = await HttpContext.GetTokenAsync("access_token");        
 
-            if (string.IsNullOrEmpty(accessToken))            
-            {                
-                return Unauthorized("Access token could not be found.");
-            }
-            
             // Eventarc sends events with a specific type for GCS uploads
             if (cloudEvent.Type != "google.cloud.storage.object.v1.finalized")
             {
                 _logger.LogWarning("Received event with unexpected type: {EventType}", cloudEvent.Type);
-                return Ok(); // Acknowledge the event but do nothing                
+                return Ok(); // Acknowledge the event but do nothing
             }
 
             // The 'Data' property of the CloudEvent is the payload
@@ -61,10 +55,10 @@ namespace ThumbnailGenerator.Controllers
             {
                 _logger.LogError("Failed to deserialize StorageObjectData.");
                 return BadRequest("Invalid StorageObjectData format."); // Acknowledge the event but do nothing
-               
+
             }
 
-            await _thumbnailService.ProcessImageAsync(storageObjectData, accessToken);
+            await _thumbnailService.ProcessImageAsync(storageObjectData);
 
             // Always return a 2xx status to Eventarc to prevent retries
             return Ok();

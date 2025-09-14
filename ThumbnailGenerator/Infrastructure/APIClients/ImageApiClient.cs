@@ -18,14 +18,12 @@ namespace ThumbnailGenerator.Infrastructure.APIClients
             _httpClient = httpClient;
         }
 
-        public async Task UpdateThumbnailStatusAsync(UpdateThumbnailImageDto updateThumbnailImageDto, String accessToken)
+        public async Task UpdateThumbnailStatusAsync(UpdateThumbnailImageDto updateThumbnailImageDto)
         {
 
             var request = new HttpRequestMessage(HttpMethod.Put, "/api/Image/update-image");
-            
-            request.Content = new StringContent(JsonSerializer.Serialize(updateThumbnailImageDto), Encoding.UTF8, "application/json"); ;
 
-            request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
+            request.Content = new StringContent(JsonSerializer.Serialize(updateThumbnailImageDto), Encoding.UTF8, "application/json"); ;
 
             var response = await _httpClient.SendAsync(request);
         }

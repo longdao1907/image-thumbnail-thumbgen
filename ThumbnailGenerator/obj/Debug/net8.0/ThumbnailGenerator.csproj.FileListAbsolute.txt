@@ -107,6 +107,7 @@ C:\Users\letin\OneDrive\Documents\image-thumbnail-thumbgen\ThumbnailGenerator\bi
 C:\Users\letin\OneDrive\Documents\image-thumbnail-thumbgen\ThumbnailGenerator\bin\Debug\net8.0\Google.Cloud.Iam.V1.dll
 C:\Users\letin\OneDrive\Documents\image-thumbnail-thumbgen\ThumbnailGenerator\bin\Debug\net8.0\Google.Cloud.Kms.V1.dll
 C:\Users\letin\OneDrive\Documents\image-thumbnail-thumbgen\ThumbnailGenerator\bin\Debug\net8.0\Google.Cloud.Location.dll
+C:\Users\letin\OneDrive\Documents\image-thumbnail-thumbgen\ThumbnailGenerator\bin\Debug\net8.0\Google.Cloud.SecretManager.V1.dll
 C:\Users\letin\OneDrive\Documents\image-thumbnail-thumbgen\ThumbnailGenerator\bin\Debug\net8.0\Google.Cloud.Storage.V1.dll
 C:\Users\letin\OneDrive\Documents\image-thumbnail-thumbgen\ThumbnailGenerator\bin\Debug\net8.0\Google.LongRunning.dll
 C:\Users\letin\OneDrive\Documents\image-thumbnail-thumbgen\ThumbnailGenerator\bin\Debug\net8.0\Google.Protobuf.dll
@@ -169,4 +170,3 @@ C:\Users\letin\OneDrive\Documents\image-thumbnail-thumbgen\ThumbnailGenerator\ob
 C:\Users\letin\OneDrive\Documents\image-thumbnail-thumbgen\ThumbnailGenerator\obj\Debug\net8.0\ThumbnailGenerator.pdb
 C:\Users\letin\OneDrive\Documents\image-thumbnail-thumbgen\ThumbnailGenerator\obj\Debug\net8.0\ThumbnailGenerator.genruntimeconfig.cache
 C:\Users\letin\OneDrive\Documents\image-thumbnail-thumbgen\ThumbnailGenerator\obj\Debug\net8.0\ref\ThumbnailGenerator.dll
-C:\Users\letin\OneDrive\Documents\image-thumbnail-thumbgen\ThumbnailGenerator\bin\Debug\net8.0\Google.Cloud.SecretManager.V1.dll
