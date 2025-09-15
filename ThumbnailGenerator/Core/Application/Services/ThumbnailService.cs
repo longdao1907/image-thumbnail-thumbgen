@@ -12,10 +12,12 @@ namespace ThumbnailGenerator.Core.Application.Services
         private readonly IImageApiClient _imageApiClient;
         private readonly ILogger<ThumbnailService> _logger;
 
+
         public ThumbnailService(
             IStorageService storageService,
             IImageProcessor imageProcessor,
             IImageApiClient imageApiClient,
+
             ILogger<ThumbnailService> logger)
         {
             _storageService = storageService;
@@ -40,6 +42,7 @@ namespace ThumbnailGenerator.Core.Application.Services
 
             var originalImageStream = new MemoryStream();
             var thumbnailStream = new MemoryStream();
+            var token = await _imageApiClient.GenerateServiceToken();
 
             try
             {
@@ -65,10 +68,10 @@ namespace ThumbnailGenerator.Core.Application.Services
                 UpdateThumbnailImageDto uploadThumbnailImageDto = new UpdateThumbnailImageDto
                 {
                     ImageId = imageId,
-                    ThumbnailUrl = string.Empty,
+                    ThumbnailUrl = thumbnailObjectName,
                     Status = ThumbnailUpdateStatus.Completed.ToString()
                 };
-                await _imageApiClient.UpdateThumbnailStatusAsync(uploadThumbnailImageDto);
+                await _imageApiClient.UpdateThumbnailStatusAsync(uploadThumbnailImageDto, token);
             }
             catch (Exception ex)
             {
@@ -80,7 +83,7 @@ namespace ThumbnailGenerator.Core.Application.Services
                     Status = ThumbnailUpdateStatus.Completed.ToString(),
                     ThumbnailUrl = null
                 };
-                await _imageApiClient.UpdateThumbnailStatusAsync(uploadThumbnailImageDto);
+                await _imageApiClient.UpdateThumbnailStatusAsync(uploadThumbnailImageDto, token);
             }
         }
 

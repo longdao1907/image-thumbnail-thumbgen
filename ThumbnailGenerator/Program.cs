@@ -29,17 +29,11 @@ string jwtKey = result.Payload.Data.ToStringUtf8();
 builder.Services.AddScoped<IStorageService, GcsStorageService>();
 builder.Services.AddScoped<IImageProcessor, ImageSharpProcessor>();
 builder.Services.AddScoped<IThumbnailService, ThumbnailService>();
-
 // Configure a typed HttpClient for the ImageApiClient
-builder.Services.AddHttpClient<IImageApiClient, ImageApiClient>(client =>
-{
-    var baseUrl = builder.Configuration["ServiceUrls:ImageAPI"];
-    if (string.IsNullOrEmpty(baseUrl))
-    {
-        throw new InvalidOperationException("ImageApi:BaseUrl is not configured.");
-    }
-    client.BaseAddress = new Uri(baseUrl);
-});
+builder.Services.AddHttpClient<IImageApiClient, ImageApiClient>();
+
+
+
 
 builder.Services.AddControllers(opts =>
     opts.InputFormatters.Insert(0, new CloudEventJsonInputFormatter(new JsonEventFormatter())));
@@ -76,8 +70,8 @@ var app = builder.Build();
 
 // 2. Configure the HTTP request pipeline.
 
-    app.UseSwagger();
-    app.UseSwaggerUI();
+app.UseSwagger();
+app.UseSwaggerUI();
 
 
 // Add authentication and authorization middleware
