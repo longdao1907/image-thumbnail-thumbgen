@@ -48,4 +48,3 @@ echo "[entrypoint] Starting .NET application..."
 exec dotnet ThumbnailGenerator.dll
 
 # Các dòng 'wait' và 'kill' ở cuối script cũ đã được loại bỏ vì 'trap' và 'exec' đã xử lý logic này.
-	

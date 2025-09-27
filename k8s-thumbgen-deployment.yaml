@@ -17,7 +17,7 @@ kind: Deployment
 metadata:
   namespace: img-thumbnail
   # Tên của Deployment, lấy từ _SERVICE_NAME
-  name: image-thumbnail-web-deployment
+  name: image-thumbnail-thumbgen-deployment
   labels:
     app: image-thumbnail-thumbgen
 spec:
@@ -84,7 +84,7 @@ spec:
   selector:
     app: image-thumbnail-thumbgen
   # Tạo một Load Balancer bên ngoài để có thể truy cập từ Internet
-  type: LoadBalancer
+  type: ClusterIP
   # Cấu hình cổng
   ports:
   - protocol: TCP
